@@ -1,0 +1,61 @@
+name: Generate Documentation from All Repositories
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Můžete ručně spustit workflow
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Get list of repositories
+        id: repos
+        run: |
+          # Získání seznamu repozitářů v organizaci
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/orgs/${{ github.repository_owner }}/repos?per_page=100" | jq -r '.[].full_name' > repos.txt
+
+      - name: Clone repositories and copy docs
+        run: |
+          # Vytvoření složky pro shromažďování dokumentace
+          mkdir -p ./docs
+          while IFS= read -r repo; do
+            echo "Klonuji repozitář: $repo"
+            git clone https://github.com/$repo.git
+            # Pokud repozitář obsahuje složku docs, zkopírujte markdown soubory
+            if [ -d "$repo/docs" ]; then
+              echo "Nalezená složka docs v repozitáři: $repo"
+              cp $repo/docs/*.md ./docs/$(basename $repo)/
+            else
+              echo "Složka docs nenalezena v repozitáři: $repo"
+            fi
+            rm -rf $repo  # Odstraní repozitář po zpracování
+          done < repos.txt
+
+      - name: Commit and push changes
+        run: |
+          git add ./docs/*
+          git commit -m "Automaticky shromážděná dokumentace"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Deploy Documentation to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Cílová větev pro GitHub Pages
+          folder: docs      # Adresář obsahující generovanou dokumentaci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token pro autentizaci
