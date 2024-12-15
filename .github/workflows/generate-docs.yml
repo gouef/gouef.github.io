@@ -88,8 +88,8 @@ jobs:
           done
       - name: Commit and push changes
         run: |
-          if git diff --quiet ./docs; then
-            echo "Žádné změny v docs, nic k commitování."
+          if git diff --quiet ./; then
+            echo "Žádné změny, nic k commitování."
           else
             git add ./docs
             git add .
