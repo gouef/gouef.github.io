@@ -45,7 +45,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add ./docs/*
+          git add ./docs
           git commit -m "Automaticky shromážděná dokumentace"
           git push origin HEAD:main
         env:
