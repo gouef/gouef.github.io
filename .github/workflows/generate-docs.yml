@@ -58,11 +58,10 @@ jobs:
             else
               echo "Složka docs nenalezena v repozitáři: $repo"
             fi
-            rm -rf $repo  # Odstraní repozitář po zpracování
-  
-  
             repo_name=$(basename $repo)
             echo "[$repo_name](./$repo_name/)" >> ./docs/index.md
+          
+            rm -rf $repo  # Odstraní repozitář po zpracování
           done < repos.txt
       - name: Generate _data/repos.yml
         run: |
