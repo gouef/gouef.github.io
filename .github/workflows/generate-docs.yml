@@ -70,6 +70,7 @@ jobs:
           echo "" > _data/repos.yml
 
           for repo in ./docs/*; do
+            echo "Found: $repo"
             if [ -d "$repo" ]; then
               repo_name=$(basename "$repo")
               echo "- name: $repo_name" >> _data/repos.yml
