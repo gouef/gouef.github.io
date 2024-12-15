@@ -2,56 +2,56 @@
 - name: database
   sections:
     - title: README
-      link: /database/README
+      link: /docs/database/README
 - name: datetime
   sections:
     - title: README
-      link: /datetime/README
+      link: /docs/datetime/README
 - name: diago
   sections:
     - title: README
-      link: /diago/README
+      link: /docs/diago/README
 - name: github-lib-template
   sections:
     - title: README
-      link: /github-lib-template/README
+      link: /docs/github-lib-template/README
 - name: math
   sections:
     - title: README
-      link: /math/README
+      link: /docs/math/README
 - name: mode
   sections:
     - title: README
-      link: /mode/README
+      link: /docs/mode/README
 - name: neon
   sections:
     - title: README
-      link: /neon/README
+      link: /docs/neon/README
 - name: paginator
   sections:
     - title: README
-      link: /paginator/README
+      link: /docs/paginator/README
 - name: renderer
   sections:
     - title: README
-      link: /renderer/README
+      link: /docs/renderer/README
 - name: router
   sections:
     - title: README
-      link: /router/README
+      link: /docs/router/README
 - name: tester
   sections:
     - title: README
-      link: /tester/README
+      link: /docs/tester/README
 - name: utils
   sections:
     - title: README
-      link: /utils/README
+      link: /docs/utils/README
 - name: web-bootstrap
   sections:
     - title: README
-      link: /web-bootstrap/README
+      link: /docs/web-bootstrap/README
 - name: web-project
   sections:
     - title: README
-      link: /web-project/README
+      link: /docs/web-project/README
