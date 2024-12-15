@@ -30,13 +30,26 @@ jobs:
         run: |
           # Vytvoření složky pro shromažďování dokumentace
           mkdir -p ./docs
+          CURRENT_REPO="${{ github.repository }}"
+          
           while IFS= read -r repo; do
+            if [[ "$repo" == "$CURRENT_REPO" ]]; then
+              echo "Přeskakuji aktuální repozitář: $repo"
+              continue
+            fi
+          
             echo "Klonuji repozitář: $repo"
             git clone https://github.com/$repo.git
+            REPO_NAME=$(basename $repo)
+          
+            mkdir -p ./docs/$REPO_NAME
+            cp $REPO_NAME/README.md ./docs/$REPO_NAME/README.md
+          
             # Pokud repozitář obsahuje složku docs, zkopírujte markdown soubory
-            if [ -d "$repo/docs" ]; then
+            if [ -d "$REPO_NAME/docs" ]; then
               echo "Nalezená složka docs v repozitáři: $repo"
-              cp $repo/docs/*.md ./docs/$(basename $repo)/
+              cp $REPO_NAME/docs/*.md ./docs/$REPO_NAME/
+          
             else
               echo "Složka docs nenalezena v repozitáři: $repo"
             fi
