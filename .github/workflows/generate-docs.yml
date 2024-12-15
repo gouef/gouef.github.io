@@ -65,6 +65,22 @@ jobs:
             echo "[$repo_name](./$repo_name/)" >> ./docs/index.md
           done < repos.txt
           
+          output="_data/repos.yml"
+          echo "" > $output
+          
+          for repo in ./docs/*; do
+            if [ -d "$repo" ]; then
+              repo_name=$(basename "$repo")
+              echo "- name: $repo_name" >> $output
+              echo "  sections:" >> $output
+              for file in "$repo"/*.md; do
+                section_name=$(basename "$file" .md | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+                section_link="/$repo_name/$(basename "$file" .md)"
+                echo "    - title: $section_name" >> $output
+                echo "      link: $section_link" >> $output
+              done
+            fi
+          done
 
       - name: Commit and push changes
         run: |

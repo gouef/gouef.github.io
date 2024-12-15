@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <ul>
+        {% for repo in site.data.repos %}
+        <li class="repo-name">
+            <a href="/{{ repo.name }}">{{ repo.name | capitalize }}</a>
+            <ul>
+                {% for section in repo.sections %}
+                <li>
+                    <a href="{{ section.link }}">{{ section.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
