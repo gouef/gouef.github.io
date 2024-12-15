@@ -63,9 +63,14 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add ./docs
-          git commit -m "[Update] Automate update documentation"
-          git push origin HEAD:main
+          if git diff --quiet ./docs; then
+            echo "Žádné změny v docs, nic k commitování."
+          else
+            git add ./docs
+            git add ./docs/**/*.*
+            git commit -m "[Update] Automate update documentation"
+            git push origin HEAD:main
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
