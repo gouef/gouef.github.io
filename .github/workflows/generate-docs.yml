@@ -43,6 +43,7 @@ jobs:
             REPO_NAME=$(basename $repo)
           
             mkdir -p ./docs/$REPO_NAME
+            mkdir -p ./docs/$REPO_NAME/docs
             cp $REPO_NAME/README.md ./docs/$REPO_NAME/README.md
           
             # Pokud repozitář obsahuje složku docs, zkopírujte markdown soubory
