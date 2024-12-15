@@ -1,65 +1,16 @@
-/* Styly pro horní navigaci */
-.header {
+body {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    color: white;
+    flex-direction: column;
 }
-
-.header .logo {
-    font-size: 1.5rem;
+#sidebar {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 1rem;
+}
+#content {
+    padding: 2rem;
+}
+.navbar-brand {
     font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-
-.header .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.header .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Styly pro boční navigaci */
-.sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
-    padding: 15px;
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar .repo-name > a {
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-}
-
-.sidebar .repo-name ul {
-    padding-left: 15px;
-}
-
-.sidebar .repo-name ul li a {
-    color: #555;
-    text-decoration: none;
-}
-
-.main-content {
-    margin-left: 270px; /* Posun kvůli boční navigaci */
-    padding: 20px;
 }

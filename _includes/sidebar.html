@@ -1,17 +1,25 @@
-<div class="sidebar">
-    <h2>Packages</h2>
-    <ul>
-        {% for repo in site.data.repos %}
-        <li class="repo-name">
-            <a href="/docs/{{ repo.name }}">{{ repo.name | capitalize }}</a>
-            <ul>
-                {% for section in repo.sections %}
-                <li>
-                    <a href="{{ section.link }}">{{ section.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
+<div id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+    <div class="position-sticky pt-3">
+        <h2 class="text-center mb-3">Packages</h2>
+        <ul class="nav flex-column">
+            {% for repo in site.data.repos %}
+            <li class="nav-item">
+                <a class="nav-link text-dark fw-bold" href="/docs/{{ repo.name }}">
+                    {{ repo.name | capitalize }}
+                </a>
+                {% if repo.sections %}
+                <ul class="nav flex-column ms-3">
+                    {% for section in repo.sections %}
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="{{ section.link }}">
+                            {{ section.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
