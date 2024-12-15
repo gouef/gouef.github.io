@@ -59,7 +59,12 @@ jobs:
               echo "Složka docs nenalezena v repozitáři: $repo"
             fi
             rm -rf $repo  # Odstraní repozitář po zpracování
+  
+  
+            repo_name=$(basename $repo)
+            echo "[$repo_name](./$repo_name/)" >> ./docs/index.md
           done < repos.txt
+          
 
       - name: Commit and push changes
         run: |
