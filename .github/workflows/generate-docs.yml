@@ -46,7 +46,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git add ./docs
-          git commit -m "Automaticky shromážděná dokumentace"
+          git commit -m "[Update] Automate update documentation"
           git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
