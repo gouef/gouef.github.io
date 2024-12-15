@@ -48,7 +48,12 @@ jobs:
             # Pokud repozitář obsahuje složku docs, zkopírujte markdown soubory
             if [ -d "$REPO_NAME/docs" ]; then
               echo "Nalezená složka docs v repozitáři: $repo"
-              cp $REPO_NAME/docs/*.md ./docs/$REPO_NAME/
+          
+              if compgen -G "$REPO_NAME/docs/*.md" > /dev/null; then
+                cp $REPO_NAME/docs/*.md ./docs/$REPO_NAME/
+              else
+                echo "Žádné Markdown soubory nenalezeny ve složce docs v repozitáři: $repo"
+              fi
           
             else
               echo "Složka docs nenalezena v repozitáři: $repo"
