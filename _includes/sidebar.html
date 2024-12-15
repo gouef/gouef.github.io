@@ -1,17 +1,17 @@
-<div id="sidebar" class="col-md-3 col-lg-2 d-md-block" data-bs-theme="dark">
+<div id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark" data-bs-theme="dark">
     <div class="position-sticky pt-3">
-        <h2 class="text-center mb-3">Packages</h2>
+        <h2 class="text-center mb-3 text-ligh">Packages</h2>
         <ul class="nav flex-column">
             {% for repo in site.data.repos %}
             <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="/docs/{{ repo.name }}">
+                <a class="nav-link text-ligh fw-bold" href="/docs/{{ repo.name }}">
                     {{ repo.name | capitalize }}
                 </a>
                 {% if repo.sections %}
                 <ul class="nav flex-column ms-3">
                     {% for section in repo.sections %}
                     <li class="nav-item">
-                        <a class="nav-link text-muted" href="{{ section.link }}">
+                        <a class="nav-link text-secondary" href="{{ section.link }}">
                             {{ section.title }}
                         </a>
                     </li>
