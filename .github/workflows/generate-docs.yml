@@ -73,6 +73,7 @@ jobs:
             echo "Found: $repo"
             if [ -d "$repo" ]; then
               repo_name=$(basename "$repo")
+              echo "Found name: $repo_name"
               echo "- name: $repo_name" >> _data/repos.yml
               echo "  sections:" >> _data/repos.yml
               for file in "$repo"/*.md; do
