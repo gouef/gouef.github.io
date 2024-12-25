@@ -1,11 +1,19 @@
 
+- name: commit-lint-action
+  sections:
+- name: create-contributors-action
+  sections:
 - name: database
   sections:
 - name: datetime
   sections:
 - name: diago
   sections:
+    - title: Index
+      link: /docs/diago/index
 - name: github-lib-template
+  sections:
+- name: go-test-with-coverage-action
   sections:
 - name: math
   sections:
@@ -15,9 +23,13 @@
   sections:
 - name: paginator
   sections:
+- name: release-action
+  sections:
 - name: renderer
   sections:
 - name: router
+  sections:
+- name: sandbox
   sections:
 - name: tester
   sections:

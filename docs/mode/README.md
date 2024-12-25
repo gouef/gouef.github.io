@@ -6,6 +6,7 @@ Mode of project
 [![GoDoc](https://pkg.go.dev/badge/github.com/gouef/mode.svg)](https://pkg.go.dev/github.com/gouef/mode)
 [![GitHub stars](https://img.shields.io/github/stars/gouef/mode?style=social)](https://github.com/gouef/mode/stargazers)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gouef/mode)](https://goreportcard.com/report/github.com/gouef/mode)
+[![codecov](https://codecov.io/github/gouef/mode/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/mode)
 
 
 ## Vesions
@@ -25,10 +26,14 @@ package main
 import "github.com/gouef/mode"
 
 func main()  {
-    m := mode.NewBasicMode()
+    m, err := mode.NewBasicMode()
+	
+	if err != nil {
+		// do something
+    }
     
     // some code
-    if m.IsRelease() {
+    if r, _ := m.IsRelease(); r {
         // some code
     }
 }
@@ -40,19 +45,20 @@ func main()  {
 package main
 import "github.com/gouef/mode"
 
-modes := []string{"staging"}
-		mode := mode.NewMode(modes)
-
 func main()  {
 	modes := []string{"staging"}
-	m := mode.NewMode(modes)
+	m, err := mode.NewMode(modes)
+
+	if err != nil {
+		// do something
+	}
 
 	// some code
-	if m.IsRelease() {
+	if r, _ := m.IsRelease(); r {
 		m.EnableMode("staging")
 	}
 	
-	if m.IsMode("staging") {
+	if sm, _ := m.IsMode("staging"); sm {
 		// some code
 	}
 }
