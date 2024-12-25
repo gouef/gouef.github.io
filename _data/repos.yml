@@ -9,6 +9,8 @@
   sections:
 - name: diago
   sections:
+    - title: Extensions
+      link: /docs/diago/extensions
     - title: Index
       link: /docs/diago/index
 - name: github-lib-template
