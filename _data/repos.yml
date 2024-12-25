@@ -11,8 +11,6 @@
   sections:
     - title: Extensions
       link: /docs/diago/extensions
-    - title: Index
-      link: /docs/diago/index
 - name: github-lib-template
   sections:
 - name: go-test-with-coverage-action
