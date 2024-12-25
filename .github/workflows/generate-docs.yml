@@ -100,6 +100,7 @@ jobs:
             git add .
             git add ./docs/**/*.*
             git commit -m "[Update] Automate update documentation"
+            git pull --rebase
             git push origin HEAD:main
           fi
         env:
