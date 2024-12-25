@@ -3,17 +3,17 @@ name: Generate contributors
 on:
   schedule:
     - cron: '0 0 * * 1'
-  pull_request:
-    types: [ opened, synchronize, edited ]
-  push:
-    branches:
-      - master
-      - main
-      - develop
-      - feature/**
-      - release/**
-      - test/**
-      - bugfix/**
+#  pull_request:
+#    types: [ opened, synchronize, edited ]
+#  push:
+#    branches:
+#      - master
+#      - main
+#      - develop
+#      - feature/**
+#      - release/**
+#      - test/**
+#      - bugfix/**
 
 jobs:
   generate-contributors:
