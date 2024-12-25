@@ -18,3 +18,4 @@ gouef/sandbox
 gouef/commit-lint-action
 gouef/create-contributors-action
 gouef/go-test-with-coverage-action
+gouef/github-repo-usages

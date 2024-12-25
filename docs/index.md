@@ -17,3 +17,4 @@
 [commit-lint-action](./commit-lint-action/)
 [create-contributors-action](./create-contributors-action/)
 [go-test-with-coverage-action](./go-test-with-coverage-action/)
+[github-repo-usages](./github-repo-usages/)

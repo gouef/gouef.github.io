@@ -13,6 +13,8 @@
       link: /docs/diago/extensions
 - name: github-lib-template
   sections:
+- name: github-repo-usages
+  sections:
 - name: go-test-with-coverage-action
   sections:
 - name: math
