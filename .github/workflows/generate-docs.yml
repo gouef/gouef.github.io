@@ -1,10 +1,12 @@
 name: Generate Documentation from All Repositories
 
 on:
+  schedule:
+    - cron: '0 * * * *'
   push:
     branches:
       - main
-  workflow_dispatch:  # Můžete ručně spustit workflow
+  workflow_dispatch:
 
 jobs:
   generate-docs:
@@ -22,13 +24,11 @@ jobs:
       - name: Get list of repositories
         id: repos
         run: |
-          # Získání seznamu repozitářů v organizaci
           curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/orgs/${{ github.repository_owner }}/repos?per_page=100" | jq -r '.[].full_name' > repos.txt
 
       - name: Clone repositories and copy docs
         run: |
-          # Vytvoření složky pro shromažďování dokumentace
           mkdir -p ./docs
           CURRENT_REPO="${{ github.repository }}"
           
@@ -38,7 +38,7 @@ jobs:
               continue
             fi
           
-            echo "Klonuji repozitář: $repo"
+            echo "Clone repository: $repo"
             git clone https://github.com/$repo.git
             REPO_NAME=$(basename $repo)
           
@@ -46,7 +46,6 @@ jobs:
             mkdir -p ./docs/$REPO_NAME/docs
             cp $REPO_NAME/README.md ./docs/$REPO_NAME/README.md
           
-            # Pokud repozitář obsahuje složku docs, zkopírujte markdown soubory
             if [ -d "$REPO_NAME/docs" ]; then
               echo "Nalezená složka docs v repozitáři: $repo"
           
@@ -110,7 +109,7 @@ jobs:
       - name: Deploy Documentation to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Cílová větev pro GitHub Pages
-          folder: docs      # Adresář obsahující generovanou dokumentaci
+          branch: gh-pages
+          folder: docs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token pro autentizaci
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
