@@ -29,6 +29,7 @@ jobs:
 
       - name: Clone repositories and copy docs
         run: |
+          rm -f -R ./docs
           mkdir -p ./docs
           CURRENT_REPO="${{ github.repository }}"
           
