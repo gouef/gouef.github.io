@@ -4,7 +4,7 @@
 Go test with coverage Github action
 
 [![GitHub stars](https://img.shields.io/github/stars/gouef/go-test-with-coverage-action?style=social)](https://github.com/gouef/go-test-with-coverage-action/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/go-test-with-coverage-action)](https://goreportcard.com/report/github.com/gouef/go-test-with-coverage-action)
+![Usages](https://img.shields.io/endpoint?url=https://github-repo-usages.vercel.app/api/getAction.go?repository=gouef/go-test-with-coverage-action)
 
 ## Versions
 ![Stable Version](https://img.shields.io/github/v/release/gouef/go-test-with-coverage-action?label=Stable&labelColor=green)
@@ -46,12 +46,12 @@ jobs:
 
 ## Contributors
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 10px;">
-<span style="width:100px;">
-  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/go-test-with-coverage-action/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
-</span>
-<span style="width:100px;">
+<div>
+<span>
   <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/go-test-with-coverage-action/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
+</span>
+<span>
+  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/go-test-with-coverage-action/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
 </span>
 </div>
 
