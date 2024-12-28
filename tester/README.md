@@ -9,7 +9,16 @@ tester
 [![Go Report Card](https://goreportcard.com/badge/github.com/gouef/tester)](https://goreportcard.com/report/github.com/gouef/tester)
 [![codecov](https://codecov.io/github/gouef/tester/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/tester)
 
-## Vesions
+## Versions
 ![Stable Version](https://img.shields.io/github/v/release/gouef/tester?label=Stable&labelColor=green)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/tester?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/tester?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+
+## Contributors
+
+<div>
+<span>
+  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/tester/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
+</span>
+</div>
+
