@@ -35,6 +35,8 @@
   sections:
 - name: sandbox
   sections:
+    - title: Test
+      link: /docs/sandbox/Test
 - name: tester
   sections:
 - name: utils
