@@ -1,7 +1,7 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
 # Release action
-Github release action
+Create / Generate Release notes based on commits with links to PRs, Issues, Users (commit author]
 
 [![GitHub stars](https://img.shields.io/github/stars/gouef/release-action?style=social)](https://github.com/gouef/release-action/stargazers)
 ![Usages](https://img.shields.io/endpoint?url=https://github-repo-usages.vercel.app/api/getAction.go?repository=gouef/release-action)
