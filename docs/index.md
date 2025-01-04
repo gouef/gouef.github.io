@@ -18,3 +18,4 @@
 [create-contributors-action](./create-contributors-action/)
 [go-test-with-coverage-action](./go-test-with-coverage-action/)
 [github-repo-usages](./github-repo-usages/)
+[github-wiki-sync-repository-action](./github-wiki-sync-repository-action/)

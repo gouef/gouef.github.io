@@ -19,3 +19,4 @@ gouef/commit-lint-action
 gouef/create-contributors-action
 gouef/go-test-with-coverage-action
 gouef/github-repo-usages
+gouef/github-wiki-sync-repository-action

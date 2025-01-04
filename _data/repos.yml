@@ -17,6 +17,10 @@
       link: /docs/github-lib-template/Badges
 - name: github-repo-usages
   sections:
+- name: github-wiki-sync-repository-action
+  sections:
+    - title: Badges
+      link: /docs/github-wiki-sync-repository-action/Badges
 - name: go-test-with-coverage-action
   sections:
 - name: math
