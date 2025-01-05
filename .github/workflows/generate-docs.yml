@@ -70,6 +70,11 @@ jobs:
           
             rm -rf $repo_name  # Odstraní repozitář po zpracování
           done < repos.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          npm install markdown-table-formatter -g
       - name: Generate _data/repos.yml
         run: |
           mkdir -p _data
@@ -84,6 +89,7 @@ jobs:
               echo "  sections:" >> _data/repos.yml
               for file in "$repo"/*.md; do
                 if [ -f "$file" ] && [[ $(basename "$file") != "README.md" ]]; then
+                  markdown-table-formatter /docs/$repo_name/$(basename "$file" .md)
                   section_name=$(basename "$file" .md | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
                   section_link="/docs/$repo_name/$(basename "$file" .md)"
                   echo "    - title: $section_name" >> _data/repos.yml
