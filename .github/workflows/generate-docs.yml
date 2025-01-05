@@ -97,7 +97,7 @@ jobs:
           node-version: 20
       - run: |
           npm install markdown-table-formatter -g
-          markdown-table-formatter /docs/**/*.md
+          markdown-table-formatter ./docs/**/*.md
       - name: Commit and push changes
         run: |
           if git diff --quiet ./; then
