@@ -27,6 +27,10 @@
   sections:
 - name: go-test-with-coverage-action
   sections:
+- name: html
+  sections:
+    - title: Badges
+      link: /docs/html/Badges
 - name: math
   sections:
 - name: mode

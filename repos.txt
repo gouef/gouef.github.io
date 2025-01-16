@@ -22,3 +22,4 @@ gouef/github-repo-usages
 gouef/github-wiki-sync-repository-action
 gouef/JanGalek
 gouef/forms
+gouef/html
