@@ -1,4 +1,6 @@
 
+- name: JanGalek
+  sections:
 - name: commit-lint-action
   sections:
 - name: create-contributors-action
@@ -11,6 +13,10 @@
   sections:
     - title: Extensions
       link: /docs/diago/extensions
+- name: forms
+  sections:
+    - title: Badges
+      link: /docs/forms/Badges
 - name: github-lib-template
   sections:
     - title: Badges
