@@ -89,7 +89,6 @@ jobs:
               echo "  sections:" >> _data/repos.yml
               for file in "$repo"/*.md; do
                 if [ -f "$file" ] && [[ $(basename "$file") != "README.md" ]]; then
-                  markdown-table-formatter /docs/$repo_name/$(basename "$file" .md)
                   section_name=$(basename "$file" .md | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
                   section_link="/docs/$repo_name/$(basename "$file" .md)"
                   echo "    - title: $section_name" >> _data/repos.yml
@@ -104,7 +103,12 @@ jobs:
       - name: Table formatter
         run: |
           npm install markdown-table-formatter -g
-          markdown-table-formatter ./docs/**/*.md
+          for md_file in ./docs/**/*.md; do
+            if [ -f "$md_file" ]; then
+              echo "Formátování Markdown souboru: $md_file"
+              markdown-table-formatter "$md_file"
+            fi
+          done
       - name: Commit and push changes
         run: |
           if git diff --quiet ./; then
