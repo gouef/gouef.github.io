@@ -101,7 +101,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: |
+      - name: Table formatter
+        run: |
           npm install markdown-table-formatter -g
           markdown-table-formatter ./docs/**/*.md
       - name: Commit and push changes
