@@ -53,6 +53,10 @@
   sections:
 - name: utils
   sections:
+- name: validator
+  sections:
+    - title: Badges
+      link: /docs/validator/Badges
 - name: web-bootstrap
   sections:
 - name: web-project
