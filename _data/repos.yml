@@ -5,6 +5,10 @@
   sections:
 - name: create-contributors-action
   sections:
+- name: currency
+  sections:
+    - title: Badges
+      link: /docs/currency/Badges
 - name: database
   sections:
 - name: datetime
