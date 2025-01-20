@@ -23,3 +23,4 @@
 [forms](./forms/)
 [html](./html/)
 [validator](./validator/)
+[currency](./currency/)
