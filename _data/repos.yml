@@ -7,8 +7,6 @@
   sections:
 - name: currency
   sections:
-    - title: Badges
-      link: /docs/currency/Badges
 - name: database
   sections:
 - name: datetime
@@ -59,8 +57,6 @@
   sections:
 - name: validator
   sections:
-    - title: Badges
-      link: /docs/validator/Badges
 - name: web-bootstrap
   sections:
 - name: web-project
