@@ -57,6 +57,8 @@
   sections:
 - name: validator
   sections:
+    - title: Validators
+      link: /docs/validator/Validators
 - name: web-bootstrap
   sections:
 - name: web-project
