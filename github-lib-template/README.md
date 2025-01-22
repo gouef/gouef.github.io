@@ -3,6 +3,8 @@
 # github-lib-template
 Github template for new libraries
 
+[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/gouef/github-lib-template)
+
 [![GoDoc](https://pkg.go.dev/badge/github.com/gouef/github-lib-template.svg)](https://pkg.go.dev/github.com/gouef/github-lib-template)
 [![GitHub stars](https://img.shields.io/github/stars/gouef/github-lib-template?style=social)](https://github.com/gouef/github-lib-template/stargazers)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gouef/github-lib-template)](https://goreportcard.com/report/github.com/gouef/github-lib-template)
