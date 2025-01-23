@@ -25,3 +25,4 @@
 [validator](./validator/)
 [currency](./currency/)
 [country](./country/)
+[standards](./standards/)
