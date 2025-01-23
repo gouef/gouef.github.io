@@ -26,3 +26,4 @@ gouef/html
 gouef/validator
 gouef/currency
 gouef/country
+gouef/standards
