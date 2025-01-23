@@ -25,3 +25,4 @@ gouef/forms
 gouef/html
 gouef/validator
 gouef/currency
+gouef/country

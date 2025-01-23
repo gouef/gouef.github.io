@@ -3,6 +3,10 @@
   sections:
 - name: commit-lint-action
   sections:
+- name: country
+  sections:
+    - title: Badges
+      link: /docs/country/Badges
 - name: create-contributors-action
   sections:
 - name: currency
