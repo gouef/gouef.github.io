@@ -32,7 +32,7 @@ The `standards` package includes different types of cache interfaces and impleme
 The `Cache` interface defines methods for working with cache items. It provides functionality for retrieving, saving, deleting, and clearing cache items.
 
 #### Methods:
-- `GetItem(key string) CacheItem`: Retrieves a cache item by key.
+- `GetItem(key string) CacheItem`: Retrieves a cache item by key or nil if not exists.
 - `GetItems(keys ...string) []CacheItem`: Retrieves multiple cache items by keys.
 - `HasItem(key string) bool`: Checks if a cache item exists.
 - `Clear() error`: Clears all items in the cache.
