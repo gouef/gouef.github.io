@@ -26,3 +26,4 @@
 [currency](./currency/)
 [country](./country/)
 [standards](./standards/)
+[logger](./logger/)
