@@ -27,3 +27,4 @@ gouef/validator
 gouef/currency
 gouef/country
 gouef/standards
+gouef/logger
