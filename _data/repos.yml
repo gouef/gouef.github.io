@@ -57,8 +57,6 @@
       link: /docs/sandbox/Test
 - name: standards
   sections:
-    - title: Badges
-      link: /docs/standards/Badges
 - name: tester
   sections:
 - name: utils
