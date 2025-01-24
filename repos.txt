@@ -28,3 +28,4 @@ gouef/currency
 gouef/country
 gouef/standards
 gouef/logger
+gouef/cache

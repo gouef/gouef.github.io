@@ -1,6 +1,8 @@
 
 - name: JanGalek
   sections:
+- name: cache
+  sections:
 - name: commit-lint-action
   sections:
 - name: country
@@ -39,8 +41,6 @@
       link: /docs/html/Badges
 - name: logger
   sections:
-    - title: Badges
-      link: /docs/logger/Badges
 - name: math
   sections:
 - name: mode
