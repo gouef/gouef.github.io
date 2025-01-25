@@ -3,6 +3,12 @@
   sections:
 - name: cache
   sections:
+    - title: File
+      link: /docs/cache/File
+    - title: Memory
+      link: /docs/cache/Memory
+    - title: Redis
+      link: /docs/cache/Redis
 - name: commit-lint-action
   sections:
 - name: country
