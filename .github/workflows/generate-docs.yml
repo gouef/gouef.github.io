@@ -131,6 +131,7 @@ jobs:
           base-url-path: https://gouef.github.io/
           path-to-root: docs
           sitemap-format: xml
+          additional-extensions: md
 
       - name: Output stats
         run: |
