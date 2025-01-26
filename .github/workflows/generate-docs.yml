@@ -124,7 +124,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
       - name: Deploy Documentation to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
