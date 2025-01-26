@@ -109,20 +109,6 @@ jobs:
               markdown-table-formatter "$md_file"
             fi
           done
-      - name: Commit and push changes
-        run: |
-          if git diff --quiet ./; then
-            echo "Žádné změny, nic k commitování."
-          else
-            git add ./docs
-            git add .
-            git add ./docs/**/*.*
-            git commit -m "[Update] Automate update documentation"
-            git pull --rebase
-            git push origin HEAD:main
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate the sitemap
         id: sitemap
@@ -138,6 +124,22 @@ jobs:
           echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
           echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
           echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+      - name: Move sitemap.xml
+        run: mv sitemap.xml docs/
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet ./; then
+            echo "Žádné změny, nic k commitování."
+          else
+            git add ./docs
+            git add .
+            git add ./docs/**/*.*
+            git commit -m "[Update] Automate update documentation"
+            git pull --rebase
+            git push origin HEAD:main
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy Documentation to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
