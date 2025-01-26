@@ -115,7 +115,6 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://gouef.github.io/
-          path-to-root: docs
           sitemap-format: xml
           additional-extensions: md
 
