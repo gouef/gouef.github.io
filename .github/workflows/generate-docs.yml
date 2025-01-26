@@ -128,7 +128,7 @@ jobs:
       - name: Fix permissions
         run: sudo chown -R $(id -u):$(id -g) sitemap.xml
       - name: Move sitemap.xml
-        run: mv sitemap.xml docs/
+        run: mv sitemap.xml _site/
       - name: Commit and push changes
         run: |
           if git diff --quiet ./; then
