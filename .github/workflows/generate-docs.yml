@@ -129,6 +129,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://gouef.github.io/
+          path-to-root: './docs'
       - name: Deploy Documentation to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
