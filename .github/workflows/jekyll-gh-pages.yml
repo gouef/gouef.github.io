@@ -34,12 +34,12 @@ jobs:
           destination: ./_site
 
       - name: Generate the sitemap
-        id: sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://gouef.github.io/
           sitemap-format: xml
           additional-extensions: md
+          path-to-root: './_site'
 
       - name: Output stats
         run: |
