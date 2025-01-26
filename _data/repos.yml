@@ -9,6 +9,8 @@
       link: /docs/cache/Memory
     - title: Redis
       link: /docs/cache/Redis
+    - title: Storage
+      link: /docs/cache/Storage
 - name: commit-lint-action
   sections:
 - name: country
