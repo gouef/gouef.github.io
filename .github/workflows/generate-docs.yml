@@ -123,6 +123,8 @@ jobs:
           echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
           echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
           echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+      - name: Fix permissions
+        run: sudo chown -R $(id -u):$(id -g) sitemap.xml
       - name: Move sitemap.xml
         run: mv sitemap.xml docs/
       - name: Commit and push changes
