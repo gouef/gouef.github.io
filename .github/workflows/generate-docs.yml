@@ -127,8 +127,6 @@ jobs:
           echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
       - name: Fix permissions
         run: sudo chown -R $(id -u):$(id -g) sitemap.xml
-      - name: Debug folder
-        run: ls -la .
       - name: Move sitemap.xml
         run: mv sitemap.xml docs/
       - name: Commit and push changes

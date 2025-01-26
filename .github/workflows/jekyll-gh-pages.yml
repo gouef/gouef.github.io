@@ -32,6 +32,38 @@ jobs:
         with:
           source: ./docs
           destination: ./_site
+
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://gouef.github.io/
+          sitemap-format: xml
+          additional-extensions: md
+
+      - name: Output stats
+        run: |
+          echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+          echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+          echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+      - name: Fix permissions
+        run: sudo chown -R $(id -u):$(id -g) sitemap.xml
+      - name: Move sitemap.xml
+        run: mv sitemap.xml docs/
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet ./; then
+            echo "Žádné změny, nic k commitování."
+          else
+            git add ./docs
+            git add .
+            git add ./docs/**/*.*
+            git commit -m "[Update] Automate update documentation"
+            git pull --rebase
+            git push origin HEAD:main
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
