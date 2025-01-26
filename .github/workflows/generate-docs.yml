@@ -145,6 +145,5 @@ jobs:
           folder: docs
           clean-exclude:
             sitemap.xml
-            docs/sitemap.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
