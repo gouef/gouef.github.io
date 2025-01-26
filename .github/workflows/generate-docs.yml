@@ -143,5 +143,7 @@ jobs:
         with:
           branch: gh-pages
           folder: docs
+          clean-exclude:
+            sitemap.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
