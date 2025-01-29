@@ -21,5 +21,8 @@ jobs:
     steps:
       - name: Generate contributors
         uses: gouef/create-contributors-action@main
+        with:
+          botName: 'Jan Galek'
+          botEmail: 'ghome.cz@gmail.com'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
