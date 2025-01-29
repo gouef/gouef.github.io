@@ -1,6 +1,4 @@
 
-- name: JanGalek
-  sections:
 - name: cache
   sections:
     - title: File
