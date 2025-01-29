@@ -56,6 +56,8 @@ jobs:
 |-----------------------------|-----------------------------------------|----------|----------------------------------------------|
 | `branch`                    | `main`                                  | `false`  | Branch                                       |
 | `excludeBot`                | `false`                                 | `true`   | Exclude actions@github.com from contributors |
+| `botName`                   | `GitHub Actions`                        | `false`  | Set bot name for contributors                |
+| `botEmail`                  | `actions@github.com`                    | `false`  | Set bot email address for contributors       |
 | `notGenerateContributorsMd` | `false`                                 | `true`   | Not commit generated CONTRIBUTORS.md ?       |
 | `commitMessageBot`          | `[Update] Automate update contributors` | `true`   | Commit message which bot will do             |
 | `svgBranch`                 | `contributors-svg`                      | `true`   | Branch where will save svgs of contributors  |
