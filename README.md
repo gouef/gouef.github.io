@@ -1,4 +1,4 @@
-<img align=right width="168" src="docs/gouef_logo.png">
+<img align=right width="168" src="https://github.com/gouef/github-lib-template/blob/d085a74a9b742ef6276b03a0d43bb1b164cbec0b/docs/gouef_logo.png">
 
 # gouef.github.io
 Generated documentation [website](https://gouef.github.io)
