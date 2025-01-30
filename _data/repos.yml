@@ -21,6 +21,10 @@
   sections:
 - name: database
   sections:
+- name: datagrid
+  sections:
+    - title: Badges
+      link: /docs/datagrid/Badges
 - name: datetime
   sections:
 - name: diago
