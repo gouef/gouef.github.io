@@ -15,6 +15,13 @@ Github template for new libraries
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
+## Join our Discord Community! 🎉
+
+[![Discord](https://discord.com/widget?id=1334331501462163509&theme=dark)](https://discord.gg/wjGqeWFnqK)
+
+Click above to join our community on Discord!
+
+
 ## Introduction
 
 This is template repository for new libraries
