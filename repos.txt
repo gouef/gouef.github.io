@@ -29,3 +29,4 @@ gouef/standards
 gouef/logger
 gouef/cache
 gouef/datagrid
+gouef/lust-goddess
