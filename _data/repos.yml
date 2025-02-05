@@ -41,6 +41,10 @@
       link: /docs/github-lib-template/Badges
 - name: github-repo-usages
   sections:
+- name: github-top-languages
+  sections:
+    - title: Badges
+      link: /docs/github-top-languages/Badges
 - name: github-wiki-sync-repository-action
   sections:
 - name: go-test-with-coverage-action
@@ -61,6 +65,10 @@
   sections:
 - name: paginator
   sections:
+- name: permission
+  sections:
+    - title: Badges
+      link: /docs/permission/Badges
 - name: release-action
   sections:
 - name: renderer

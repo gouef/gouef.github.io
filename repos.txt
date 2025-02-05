@@ -30,3 +30,5 @@ gouef/logger
 gouef/cache
 gouef/datagrid
 gouef/lust-goddess
+gouef/permission
+gouef/github-top-languages
