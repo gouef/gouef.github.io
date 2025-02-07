@@ -41,12 +41,12 @@
       link: /docs/github-lib-template/Badges
 - name: github-repo-usages
   sections:
-- name: github-top-languages
-  sections:
-    - title: Badges
-      link: /docs/github-top-languages/Badges
 - name: github-wiki-sync-repository-action
   sections:
+- name: githubtoplanguages
+  sections:
+    - title: Badges
+      link: /docs/githubtoplanguages/Badges
 - name: go-test-with-coverage-action
   sections:
 - name: html

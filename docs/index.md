@@ -30,4 +30,4 @@
 [datagrid](./datagrid/)
 [lust-goddess](./lust-goddess/)
 [permission](./permission/)
-[github-top-languages](./github-top-languages/)
+[githubtoplanguages](./githubtoplanguages/)
