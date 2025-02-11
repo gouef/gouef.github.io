@@ -67,8 +67,6 @@
   sections:
 - name: permission
   sections:
-    - title: Badges
-      link: /docs/permission/Badges
 - name: release-action
   sections:
 - name: renderer
