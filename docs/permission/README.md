@@ -1,7 +1,7 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
 # permission
-Github template for new libraries
+This library provides an access control system for managing permissions between entities and resources.
 
 [![Static Badge](https://img.shields.io/badge/Github-gouef%2Fpermission-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fpermission)](https://github.com/gouef/permission)
 
@@ -15,15 +15,16 @@ Github template for new libraries
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/permission?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/permission?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
+## Installation
 
-## Introduction
+To install the `permission` package, use the following Go command:
 
-This is template repository for new libraries
+```bash
+go get -u github.com/gouef/permission
+```
 
-## Important
-
-- Edit go.mod and rename to your package module
-- Uncomment .github/workflows/tests.yml
+## Documentation
+There are [AccessControl](/docs/AccessControl.md), [Entity](/docs/Entity.md), [Permission](/docs/Permission.md) and [Resource](/docs/Resource.md)
 
 ## Contributing
 
@@ -33,10 +34,10 @@ Read [Contributing](CONTRIBUTING.md)
 
 <div>
 <span>
-  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/permission/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
+  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/permission/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
 </span>
 <span>
-  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/permission/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
+  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/permission/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
 </span>
 </div>
 

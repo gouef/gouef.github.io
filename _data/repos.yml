@@ -67,6 +67,14 @@
   sections:
 - name: permission
   sections:
+    - title: AccessControl
+      link: /docs/permission/AccessControl
+    - title: Entity
+      link: /docs/permission/Entity
+    - title: Permission
+      link: /docs/permission/Permission
+    - title: Resource
+      link: /docs/permission/Resource
 - name: release-action
   sections:
 - name: renderer
