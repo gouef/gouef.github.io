@@ -51,8 +51,6 @@
   sections:
 - name: hooks
   sections:
-    - title: Badges
-      link: /docs/hooks/Badges
 - name: html
   sections:
     - title: Badges
