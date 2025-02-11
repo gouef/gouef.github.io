@@ -32,3 +32,4 @@ gouef/datagrid
 gouef/lust-goddess
 gouef/permission
 gouef/githubtoplanguages
+gouef/hooks

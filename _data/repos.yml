@@ -49,6 +49,10 @@
       link: /docs/githubtoplanguages/Badges
 - name: go-test-with-coverage-action
   sections:
+- name: hooks
+  sections:
+    - title: Badges
+      link: /docs/hooks/Badges
 - name: html
   sections:
     - title: Badges
