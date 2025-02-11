@@ -59,6 +59,10 @@
   sections:
 - name: lust-goddess
   sections:
+- name: mailer
+  sections:
+    - title: Badges
+      link: /docs/mailer/Badges
 - name: math
   sections:
 - name: mode
