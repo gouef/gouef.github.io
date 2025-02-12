@@ -34,3 +34,4 @@ gouef/permission
 gouef/githubtoplanguages
 gouef/hooks
 gouef/mailer
+gouef/passwords

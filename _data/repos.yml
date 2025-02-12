@@ -71,6 +71,10 @@
   sections:
 - name: paginator
   sections:
+- name: passwords
+  sections:
+    - title: Badges
+      link: /docs/passwords/Badges
 - name: permission
   sections:
     - title: AccessControl
