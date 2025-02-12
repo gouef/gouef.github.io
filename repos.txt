@@ -35,3 +35,4 @@ gouef/githubtoplanguages
 gouef/hooks
 gouef/mailer
 gouef/passwords
+gouef/schema

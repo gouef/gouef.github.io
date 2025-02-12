@@ -34,3 +34,4 @@
 [hooks](./hooks/)
 [mailer](./mailer/)
 [passwords](./passwords/)
+[schema](./schema/)

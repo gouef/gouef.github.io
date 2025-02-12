@@ -95,6 +95,10 @@
   sections:
     - title: Test
       link: /docs/sandbox/Test
+- name: schema
+  sections:
+    - title: Badges
+      link: /docs/schema/Badges
 - name: standards
   sections:
 - name: tester
