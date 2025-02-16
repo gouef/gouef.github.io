@@ -35,3 +35,4 @@
 [mailer](./mailer/)
 [passwords](./passwords/)
 [schema](./schema/)
+[translator](./translator/)
