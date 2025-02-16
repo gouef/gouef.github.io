@@ -36,3 +36,4 @@ gouef/hooks
 gouef/mailer
 gouef/passwords
 gouef/schema
+gouef/translator

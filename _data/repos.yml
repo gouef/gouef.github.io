@@ -103,6 +103,10 @@
   sections:
 - name: tester
   sections:
+- name: translator
+  sections:
+    - title: Badges
+      link: /docs/translator/Badges
 - name: utils
   sections:
 - name: validator
