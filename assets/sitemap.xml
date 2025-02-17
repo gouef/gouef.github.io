@@ -42,7 +42,7 @@
 </url>
 <url>
 <loc>https://gouef.github.io/docs/cache/Storage.md</loc>
-<lastmod>2025-01-26T18:27:34+00:00</lastmod>
+<lastmod>2025-02-17T01:49:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/commit-lint-action/README.md</loc>
@@ -87,6 +87,14 @@
 <url>
 <loc>https://gouef.github.io/docs/diago/extensions.md</loc>
 <lastmod>2024-12-25T20:46:16+00:00</lastmod>
+</url>
+<url>
+<loc>https://gouef.github.io/docs/finder/Badges.md</loc>
+<lastmod>2025-02-17T02:55:15+00:00</lastmod>
+</url>
+<url>
+<loc>https://gouef.github.io/docs/finder/README.md</loc>
+<lastmod>2025-02-17T02:55:15+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/forms/Badges.md</loc>
@@ -150,7 +158,7 @@
 </url>
 <url>
 <loc>https://gouef.github.io/docs/mailer/README.md</loc>
-<lastmod>2025-02-11T21:20:49+00:00</lastmod>
+<lastmod>2025-02-17T01:49:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/math/README.md</loc>
@@ -238,7 +246,7 @@
 </url>
 <url>
 <loc>https://gouef.github.io/docs/translator/README.md</loc>
-<lastmod>2025-02-16T10:21:31+00:00</lastmod>
+<lastmod>2025-02-17T01:49:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/utils/README.md</loc>
@@ -274,7 +282,7 @@
 </url>
 <url>
 <loc>https://gouef.github.io/docs/cache/docs/Storage.md</loc>
-<lastmod>2025-01-26T18:27:34+00:00</lastmod>
+<lastmod>2025-02-17T01:49:43+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/country/docs/Badges.md</loc>
@@ -287,6 +295,10 @@
 <url>
 <loc>https://gouef.github.io/docs/diago/docs/extensions.md</loc>
 <lastmod>2024-12-25T20:46:16+00:00</lastmod>
+</url>
+<url>
+<loc>https://gouef.github.io/docs/finder/docs/Badges.md</loc>
+<lastmod>2025-02-17T02:55:15+00:00</lastmod>
 </url>
 <url>
 <loc>https://gouef.github.io/docs/forms/docs/Badges.md</loc>

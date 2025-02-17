@@ -36,3 +36,4 @@
 [passwords](./passwords/)
 [schema](./schema/)
 [translator](./translator/)
+[finder](./finder/)

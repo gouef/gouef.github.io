@@ -37,3 +37,4 @@ gouef/mailer
 gouef/passwords
 gouef/schema
 gouef/translator
+gouef/finder
