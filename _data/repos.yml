@@ -77,6 +77,12 @@
   sections:
 - name: passwords
   sections:
+    - title: Argon
+      link: /docs/passwords/Argon
+    - title: Bcrypt
+      link: /docs/passwords/Bcrypt
+    - title: Passwords
+      link: /docs/passwords/passwords
 - name: permission
   sections:
     - title: AccessControl
