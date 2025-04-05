@@ -38,3 +38,4 @@ gouef/passwords
 gouef/schema
 gouef/translator
 gouef/finder
+gouef/proxier

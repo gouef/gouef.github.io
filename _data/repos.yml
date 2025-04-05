@@ -93,6 +93,10 @@
       link: /docs/permission/Permission
     - title: Resource
       link: /docs/permission/Resource
+- name: proxier
+  sections:
+    - title: Badges
+      link: /docs/proxier/Badges
 - name: release-action
   sections:
 - name: renderer
