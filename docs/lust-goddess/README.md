@@ -21,5 +21,8 @@ web-project
 <span>
   <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/lust-goddess/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
 </span>
+<span>
+  <a href="https://github.com/apps/dependabot"><img src="https://raw.githubusercontent.com/gouef/lust-goddess/refs/heads/contributors-svg/.github/contributors/dependabot[bot].svg" alt="dependabot[bot]" /></a>
+</span>
 </div>
 
