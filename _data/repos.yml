@@ -33,8 +33,6 @@
       link: /docs/diago/extensions
 - name: finder
   sections:
-    - title: Badges
-      link: /docs/finder/Badges
 - name: forms
   sections:
     - title: Badges
