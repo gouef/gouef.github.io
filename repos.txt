@@ -39,3 +39,4 @@ gouef/schema
 gouef/translator
 gouef/finder
 gouef/proxier
+gouef/github-workflows

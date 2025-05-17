@@ -45,6 +45,10 @@
   sections:
 - name: github-wiki-sync-repository-action
   sections:
+- name: github-workflows
+  sections:
+    - title: Badges
+      link: /docs/github-workflows/Badges
 - name: githubtoplanguages
   sections:
     - title: Badges
