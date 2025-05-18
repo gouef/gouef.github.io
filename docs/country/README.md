@@ -16,6 +16,11 @@ This package provides functions to search for country information ([ISO 3166-1](
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/country?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/country?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
+## Also available in other languages
+
+[![Go Implementation](https://img.shields.io/badge/Go-country-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/country)
+[![PHP Implementation](https://img.shields.io/badge/PHP-country-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/country)
+
 ## Installation
 
 To use this package in your project, add it using Go modules:
