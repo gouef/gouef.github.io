@@ -89,6 +89,25 @@ if sCountry != nil {
 }
 ```
 
+`FlagEmoji() string`
+
+return emoji flag of country
+
+```go
+package main
+
+import "github.com/gouef/country"
+
+sCountry := country.FindByName("Czechia")
+if sCountry != nil {
+    fmt.Println("Country Name:", sCountry.Name)
+    fmt.Println("Alpha-2 Code:", sCountry.Alpha2)
+    fmt.Println("Alpha-3 Code:", sCountry.Alpha3)
+    fmt.Println("Flag:", sCountry.FlagEmoji())
+}
+```
+
+
 ## Example
 
 ```go
