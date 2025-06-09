@@ -39,3 +39,4 @@
 [finder](./finder/)
 [proxier](./proxier/)
 [github-workflows](./github-workflows/)
+[configuration](./configuration/)
