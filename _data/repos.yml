@@ -11,6 +11,10 @@
       link: /docs/cache/Storage
 - name: commit-lint-action
   sections:
+- name: configuration
+  sections:
+    - title: Badges
+      link: /docs/configuration/Badges
 - name: country
   sections:
     - title: Badges

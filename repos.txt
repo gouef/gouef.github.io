@@ -40,3 +40,4 @@ gouef/translator
 gouef/finder
 gouef/proxier
 gouef/github-workflows
+gouef/configuration
