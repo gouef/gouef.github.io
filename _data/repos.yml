@@ -51,8 +51,6 @@
   sections:
 - name: github-workflows
   sections:
-    - title: Badges
-      link: /docs/github-workflows/Badges
 - name: githubtoplanguages
   sections:
     - title: Badges
