@@ -97,6 +97,10 @@
       link: /docs/permission/Permission
     - title: Resource
       link: /docs/permission/Resource
+- name: prime-numbers
+  sections:
+    - title: Badges
+      link: /docs/prime-numbers/Badges
 - name: proxier
   sections:
     - title: Badges

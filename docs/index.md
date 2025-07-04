@@ -40,3 +40,4 @@
 [proxier](./proxier/)
 [github-workflows](./github-workflows/)
 [configuration](./configuration/)
+[prime-numbers](./prime-numbers/)

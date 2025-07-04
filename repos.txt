@@ -41,3 +41,4 @@ gouef/finder
 gouef/proxier
 gouef/github-workflows
 gouef/configuration
+gouef/prime-numbers
