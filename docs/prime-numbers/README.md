@@ -1,7 +1,7 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
 # prime-numbers
-Github template for new libraries
+Prime numbers, you can Validate, get list or get multiply table.
 
 [![Static Badge](https://img.shields.io/badge/Github-gouef%2Fprime--numbers-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fprime-numbers)](https://github.com/gouef/prime-numbers)
 
@@ -15,21 +15,96 @@ Github template for new libraries
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/prime-numbers?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/prime-numbers?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
-## Also available in other languages
+## Features
 
-[![Go Implementation](https://img.shields.io/badge/Go-prime--numbers-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/prime-numbers)
-[![PHP Implementation](https://img.shields.io/badge/PHP-prime--numbers-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/prime-numbers)
-[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-prime--numbers-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/prime-numbers)
+- Validate number if it's a prime number.
+- Generate list of prime numbers (by size).
+- Create Multiply table of prime numbers.
+
+## Installation
+
+```shell
+go get -u github.com/gouef/prime-numbers
+```
+
+## Usages
+
+### Validate
+function Validate returns bool.
+
+```go
+package main
+
+import (
+	"log"
+	primeNumbers "github.com/gouef/prime-numbers"
+)
+
+func main() {
+	num := 13
+	isPrime := primeNumbers.Validate(num)
+	if isPrime == false {
+		log.Fatalf("Number : %v is not a prime number", num)
+	}
+}
+
+```
 
 
-## Introduction
 
-This is template repository for new libraries
+### Generator
+function Generator returns []int of prime numbers.
 
-## Important
+```go
+package main
 
-- Edit go.mod and rename to your package module
-- Uncomment .github/workflows/tests.yml
+import (
+	"log"
+	primeNumbers "github.com/gouef/prime-numbers"
+)
+
+func main() {
+	size := 3
+	listPrimeNumbers := primeNumbers.Generate(size) // returns []int{2, 3, 5}
+	
+	if len(listPrimeNumbers) == 3 {
+		// ...
+    }
+}
+
+```
+
+
+
+### MultiplyTable
+function MultiplyTable returns map[int]map[int]int of prime numbers.
+
+```go
+package main
+
+import (
+	"log"
+	primeNumbers "github.com/gouef/prime-numbers"
+)
+
+func main() {
+	size := 3
+	numberTable := primeNumbers.MultiplyTable(size) 
+	// returns map[int]map[int]int{
+	//  2: {2: 4, 3: 6, 5: 10},
+	//  3: {2: 6, 3: 9, 5: 15},
+	//  5: {2: 10, 3: 15, 5: 25},
+    // }
+
+	for i1, l := range numberTable {
+		for i2, m := range l {
+            log.Printf("Number %v x %v = %v", i1, i2, m)
+		}
+	}
+}
+
+```
+
 
 ## Contributing
 
@@ -39,10 +114,10 @@ Read [Contributing](CONTRIBUTING.md)
 
 <div>
 <span>
-  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/prime-numbers/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
+  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/prime-numbers/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
 </span>
 <span>
-  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/prime-numbers/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
+  <a href="https://github.com/actions-user"><img src="https://raw.githubusercontent.com/gouef/prime-numbers/refs/heads/contributors-svg/.github/contributors/actions-user.svg" alt="actions-user" /></a>
 </span>
 </div>
 
