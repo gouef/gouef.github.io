@@ -1,25 +1,25 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
-# github-lib-template
+# prime-numbers
 Github template for new libraries
 
-[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/gouef/github-lib-template)
+[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fprime--numbers-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fprime-numbers)](https://github.com/gouef/prime-numbers)
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/github-lib-template.svg)](https://pkg.go.dev/github.com/gouef/github-lib-template)
-[![GitHub stars](https://img.shields.io/github/stars/gouef/github-lib-template?style=social)](https://github.com/gouef/github-lib-template/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/github-lib-template)](https://goreportcard.com/report/github.com/gouef/github-lib-template)
-[![codecov](https://codecov.io/github/gouef/github-lib-template/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/github-lib-template)
+[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/prime-numbers.svg)](https://pkg.go.dev/github.com/gouef/prime-numbers)
+[![GitHub stars](https://img.shields.io/github/stars/gouef/prime-numbers?style=social)](https://github.com/gouef/prime-numbers/stargazers)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/prime-numbers)](https://goreportcard.com/report/github.com/gouef/prime-numbers)
+[![codecov](https://codecov.io/github/gouef/prime-numbers/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/prime-numbers)
 
 ## Versions
-![Stable Version](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Stable&labelColor=green)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+![Stable Version](https://img.shields.io/github/v/release/gouef/prime-numbers?label=Stable&labelColor=green)
+![GitHub Release](https://img.shields.io/github/v/release/gouef/prime-numbers?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
+![GitHub Release](https://img.shields.io/github/v/release/gouef/prime-numbers?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
 ## Also available in other languages
 
-[![Go Implementation](https://img.shields.io/badge/Go-github--lib--template-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/github-lib-template)
-[![PHP Implementation](https://img.shields.io/badge/PHP-github--lib--template-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/github-lib-template)
-[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-github--lib--template-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/github-lib-template)
+[![Go Implementation](https://img.shields.io/badge/Go-prime--numbers-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/prime-numbers)
+[![PHP Implementation](https://img.shields.io/badge/PHP-prime--numbers-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/prime-numbers)
+[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-prime--numbers-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/prime-numbers)
 
 
 ## Introduction
