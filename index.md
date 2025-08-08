@@ -41,3 +41,4 @@
 [github-workflows](./github-workflows/)
 [configuration](./configuration/)
 [prime-numbers](./prime-numbers/)
+[latte](./latte/)
