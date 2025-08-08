@@ -63,6 +63,10 @@
   sections:
     - title: Badges
       link: /docs/html/Badges
+- name: latte
+  sections:
+    - title: Badges
+      link: /docs/latte/Badges
 - name: logger
   sections:
 - name: lust-goddess
