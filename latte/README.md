@@ -1,25 +1,25 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
-# github-lib-template
+# latte
 Github template for new libraries
 
-[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/gouef/github-lib-template)
+[![Static Badge](https://img.shields.io/badge/Github-gouef%2Flatte-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Flatte)](https://github.com/gouef/latte)
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/github-lib-template.svg)](https://pkg.go.dev/github.com/gouef/github-lib-template)
-[![GitHub stars](https://img.shields.io/github/stars/gouef/github-lib-template?style=social)](https://github.com/gouef/github-lib-template/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/github-lib-template)](https://goreportcard.com/report/github.com/gouef/github-lib-template)
-[![codecov](https://codecov.io/github/gouef/github-lib-template/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/github-lib-template)
+[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/latte.svg)](https://pkg.go.dev/github.com/gouef/latte)
+[![GitHub stars](https://img.shields.io/github/stars/gouef/latte?style=social)](https://github.com/gouef/latte/stargazers)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/latte)](https://goreportcard.com/report/github.com/gouef/latte)
+[![codecov](https://codecov.io/github/gouef/latte/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/latte)
 
 ## Versions
-![Stable Version](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Stable&labelColor=green)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+![Stable Version](https://img.shields.io/github/v/release/gouef/latte?label=Stable&labelColor=green)
+![GitHub Release](https://img.shields.io/github/v/release/gouef/latte?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
+![GitHub Release](https://img.shields.io/github/v/release/gouef/latte?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
 
 ## Also available in other languages
 
-[![Go Implementation](https://img.shields.io/badge/Go-github--lib--template-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/github-lib-template)
-[![PHP Implementation](https://img.shields.io/badge/PHP-github--lib--template-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/github-lib-template)
-[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-github--lib--template-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/github-lib-template)
+[![Go Implementation](https://img.shields.io/badge/Go-latte-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/latte)
+[![PHP Implementation](https://img.shields.io/badge/PHP-latte-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/latte)
+[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-latte-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/latte)
 
 
 ## Introduction
