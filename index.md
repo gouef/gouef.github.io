@@ -42,3 +42,4 @@
 [configuration](./configuration/)
 [prime-numbers](./prime-numbers/)
 [latte](./latte/)
+[gorm](./gorm/)
