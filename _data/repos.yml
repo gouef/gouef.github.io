@@ -57,6 +57,10 @@
       link: /docs/githubtoplanguages/Badges
 - name: go-test-with-coverage-action
   sections:
+- name: gorm
+  sections:
+    - title: Badges
+      link: /docs/gorm/Badges
 - name: hooks
   sections:
 - name: html
