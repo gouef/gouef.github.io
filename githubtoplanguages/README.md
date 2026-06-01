@@ -51,20 +51,24 @@ jobs:
           limit: 6
           ignoredOrgsFlag: "wowmua"
           ignoredReposFlag: "wowmua/Maps"
+          ignoredLangsFlag: ""
+          withForks: "false"
         env:
           GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
 ```
 
 ## Action inputs
 
-| Input              | Default              | Required | Description                                   |
-|--------------------|----------------------|----------|-----------------------------------------------|
-| `botName`          | `Jan Galek`          | `false`  | Set bot name for contributors                 |
-| `botEmail`         | `ghome.cz@gmail.com` | `false`  | Set bot email address for contributors        |
-| `user`             | ``                   | `true`   | Github UserName                               |
-| `limit`            | `6`                  | `true`   | Limit of languages                            |
-| `ignoredOrgsFlag`  | ``                   | `true`   | Comma-separated list of ignored organizations |
-| `ignoredReposFlag` | ``                   | `true`   | Comma-separated list of ignored repositories  |
+| Input              | Default              | Required | Description                                              |
+|--------------------|----------------------|----------|----------------------------------------------------------|
+| `botName`          | `Jan Galek`          | `false`  | Set bot name for contributors                            |
+| `botEmail`         | `ghome.cz@gmail.com` | `false`  | Set bot email address for contributors                   |
+| `user`             | ``                   | `true`   | Github UserName                                          |
+| `limit`            | `6`                  | `true`   | Limit of languages                                       |
+| `ignoredOrgsFlag`  | ``                   | `true`   | Comma-separated list of ignored organizations            |
+| `ignoredReposFlag` | ``                   | `true`   | Comma-separated list of ignored repositories             |
+| `ignoredLangsFlag` | ``                   | `false`  | Comma-separated list of ignored languages                |
+| `withForks`        | `false`              | `false`  | Include forked repositories in the analysis (true/false) |
 
 
 ## Contributing
