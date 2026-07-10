@@ -73,8 +73,6 @@
       link: /docs/latte/Badges
 - name: logger
   sections:
-- name: lust-goddess
-  sections:
 - name: mailer
   sections:
     - title: Badges
