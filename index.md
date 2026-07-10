@@ -28,7 +28,6 @@
 [logger](./logger/)
 [cache](./cache/)
 [datagrid](./datagrid/)
-[lust-goddess](./lust-goddess/)
 [permission](./permission/)
 [githubtoplanguages](./githubtoplanguages/)
 [hooks](./hooks/)
