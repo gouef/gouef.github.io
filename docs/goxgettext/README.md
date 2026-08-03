@@ -1,51 +1,138 @@
-<img align=right width="168" src="docs/gouef_logo.png">
+# goxgettext
 
-# github-lib-template
-Github template for new libraries
+A lightweight gettext-style extractor for Go projects.
 
-[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/gouef/github-lib-template)
+goxgettext scans Go source files and GoHTML/HTML templates, collects translatable strings, and generates POT/PO catalogs for your project.
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/github-lib-template.svg)](https://pkg.go.dev/github.com/gouef/github-lib-template)
-[![GitHub stars](https://img.shields.io/github/stars/gouef/github-lib-template?style=social)](https://github.com/gouef/github-lib-template/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/github-lib-template)](https://goreportcard.com/report/github.com/gouef/github-lib-template)
-[![codecov](https://codecov.io/github/gouef/github-lib-template/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/github-lib-template)
+## ✨ Features
 
-## Versions
-![Stable Version](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Stable&labelColor=green)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+- Extracts messages from Go calls such as `gettext`, `t`, `T`, and `i18n`
+- Scans GoHTML and HTML templates for translation calls (keyword-based)
+- Supports recursive directory scanning
+- Generates POT and PO output
+- Can create language-specific PO files and a POTFILES list from `LINGUAS`
+- Supports custom keywords and additional file extensions
 
-## Also available in other languages
+## 🚀 Installation
 
-[![Go Implementation](https://img.shields.io/badge/Go-github--lib--template-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/github-lib-template)
-[![PHP Implementation](https://img.shields.io/badge/PHP-github--lib--template-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/github-lib-template)
-[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-github--lib--template-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/github-lib-template)
+Install the latest release binary with Go:
 
+```bash
+go install github.com/gouef/goxgettext@latest
+```
 
-## Introduction
+Install from the repository source:
 
-This is template repository for new libraries
+```bash
+make build
+```
 
-## Important
+The binary will be created at ./bin/goxgettext and can be run directly.
 
-- Edit go.mod and rename to your package module
-- Uncomment .github/workflows/tests.yml
+Install from a single shell script:
 
-## Contributing
+```bash
+curl -fsSL https://raw.githubusercontent.com/gouef/goxgettext/main/install.sh -o /tmp/install-goxgettext.sh
+sh /tmp/install-goxgettext.sh
+```
 
-Read [Contributing](CONTRIBUTING.md)
+The script downloads the correct release binary for your platform and installs it to `$HOME/.local/bin/goxgettext` by default. Make sure that directory is on your `PATH`.
+
+No `chmod +x` is required here — the script is intended to be run as `sh /tmp/install-goxgettext.sh`.
+
+If you want a system-wide install, you can override the target directory:
+
+```bash
+INSTALL_DIR=/usr/local/bin sh /tmp/install-goxgettext.sh
+```
+
+After installation, you can run `goxgettext` directly from your shell.
+
+## 🧪 Usage
+
+The simplest workflow is to generate everything in one step:
+
+```bash
+./bin/goxgettext --all --output-dir locale .
+```
+
+This creates:
+
+- a POT file at `locale/messages.pot`
+- a PO file at `locale/messages.po`
+- language files such as `locale/cs.po`
+- a `locale/POTFILES` list
+
+If you only want a POT catalog:
+
+```bash
+./bin/goxgettext --output messages.pot .
+```
+
+If you only want a PO catalog:
+
+```bash
+./bin/goxgettext --format po --output messages.po .
+```
+
+If you want to generate language files without writing the POT/PO files:
+
+```bash
+./bin/goxgettext --output-dir locale .
+```
+
+Generate a single language file explicitly:
+
+```bash
+./bin/goxgettext --output-dir locale --language cs .
+```
+
+Build release binaries for multiple platforms:
+
+```bash
+make release
+```
+
+## 📦 Release binaries
+
+When a tag matching `v*` is pushed, the GitHub Actions workflow in [.github/workflows/release.yml](.github/workflows/release.yml) builds release artifacts for Linux, macOS, and Windows and uploads them to the GitHub Release.
+
+You can also trigger the workflow manually from the Actions tab and choose a tag name.
+
+Download the appropriate binary for your platform from the release page and run it directly.
+
+## ⚙️ Useful flags
+
+- --output: write the generated catalog to a file
+- --format: select pot or po output
+- --keyword: add custom translation function names
+- --extension: include additional file extensions to scan
+- --output-dir: write generated language files to a directory
+- --language: generate or update a specific language file
+
+## 🛠️ Development
+
+Run the test suite:
+
+```bash
+make test
+```
+
+Generate a coverage report:
+
+```bash
+make coverage
+```
 
 ## Contributors
 
 <div>
-<span>
-  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/goxgettext/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
-</span>
+<a href="https://github.com/gouef/goxgettext/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gouef/goxgettext" />
+</a>
 </div>
 
-## Join our Discord Community! 🎉
+## 🤝 Contributing
 
-[![Discord](https://img.shields.io/discord/1334331501462163509?style=for-the-badge&logo=discord&logoColor=white&logoSize=auto&label=Community%20discord&labelColor=blue&link=https%3A%2F%2Fdiscord.gg%2FwjGqeWFnqK
-)](https://discord.gg/wjGqeWFnqK)
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Click above to join our community on Discord!
