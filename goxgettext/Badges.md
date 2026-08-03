@@ -11,4 +11,4 @@ I created small api and connect to [Shields.io](https://shields.io), you can use
 ![Usages](https://img.shields.io/endpoint?url=https://github-repo-usages.vercel.app/api/getAction.go?repository=gouef/commit-lint-action)
 ```
 
-![Usages](https://img.shields.io/endpoint?url=https://github-repo-usages.vercel.app/api/getAction.go?repository=gouef/github-lib-template)
+![Usages](https://img.shields.io/endpoint?url=https://github-repo-usages.vercel.app/api/getAction.go?repository=gouef/goxgettext)
