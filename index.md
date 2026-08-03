@@ -42,3 +42,4 @@
 [prime-numbers](./prime-numbers/)
 [latte](./latte/)
 [gorm](./gorm/)
+[goxgettext](./goxgettext/)
