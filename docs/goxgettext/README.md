@@ -1,6 +1,40 @@
 # goxgettext
 
-A lightweight gettext-style extractor for Go projects.
+<p align="center">
+  <strong>gettext-style extraction workflow for Go and GoHTML projects</strong><br/>
+  Extract translation keys, generate POT/PO catalogs, update language files from LINGUAS, and keep POTFILES in sync.
+</p>
+
+<p align="center">
+  <a href="#-installation"><strong>Install</strong></a>
+  ·
+  <a href="#-usage"><strong>Usage</strong></a>
+  ·
+  <a href="#-example"><strong>Example</strong></a>
+  ·
+  <a href="#-release-binaries"><strong>Release</strong></a>
+  ·
+  <a href="#license"><strong>License</strong></a>
+</p>
+
+> [!TIP]
+> Quick start:
+>
+> ```bash
+> goxgettext --all --output-dir po .
+> ```
+
+[![Release](https://img.shields.io/github/v/release/gouef/goxgettext?style=for-the-badge)](https://github.com/gouef/goxgettext/releases)
+[![Release Date](https://img.shields.io/github/release-date/gouef/goxgettext?style=for-the-badge)](https://github.com/gouef/goxgettext/releases)
+[![Downloads](https://img.shields.io/github/downloads/gouef/goxgettext/total?style=for-the-badge)](https://github.com/gouef/goxgettext/releases)
+[![License](https://img.shields.io/github/license/gouef/goxgettext?style=for-the-badge)](LICENSE)
+
+[![Tests](https://img.shields.io/github/actions/workflow/status/gouef/goxgettext/tests.yml?style=for-the-badge)](https://github.com/gouef/goxgettext/actions/workflows/tests.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/gouef/goxgettext?style=for-the-badge)](https://app.codecov.io/gh/gouef/goxgettext)
+[![Commit Lint](https://img.shields.io/github/actions/workflow/status/gouef/goxgettext/commit-lint.yml?style=for-the-badge)](https://github.com/gouef/goxgettext/actions/workflows/commit-lint.yml)
+[![Go Version](https://img.shields.io/badge/Go-1.26.5-00ADD8?logo=go&style=for-the-badge)](https://go.dev/)
+
+Lightweight gettext-style extractor for Go projects.
 
 goxgettext scans Go source files and GoHTML/HTML templates, collects translatable strings, and generates POT/PO catalogs for your project.
 
@@ -56,6 +90,8 @@ The simplest workflow is to generate everything in one step:
 ./bin/goxgettext --all --output-dir locale .
 ```
 
+Language files are generated from entries in `LINGUAS` (for example `cs` and `en`).
+
 This creates:
 
 - a POT file at `locale/messages.pot`
@@ -81,16 +117,65 @@ If you want to generate language files without writing the POT/PO files:
 ./bin/goxgettext --output-dir locale .
 ```
 
-Generate a single language file explicitly:
+This also uses `LINGUAS` to decide which language files are generated.
 
-```bash
-./bin/goxgettext --output-dir locale --language cs .
-```
-
-Build release binaries for multiple platforms:
+Create release binaries for multiple platforms:
 
 ```bash
 make release
+```
+
+## 📘 Example
+
+Minimal project input:
+
+```text
+my-app/
+  po/
+    LINGUAS
+  views/
+    navigation.gohtml
+  main.go
+```
+
+`po/LINGUAS` (one language per line):
+
+```text
+cs
+en
+```
+
+`views/navigation.gohtml`:
+
+```gohtml
+<nav>
+  <a>{{ i18n "nav.home" }}</a>
+  <a>{{ i18n "nav.projects" }}</a>
+</nav>
+```
+
+Run:
+
+```bash
+goxgettext --all --output-dir po .
+```
+
+Generated files:
+
+```text
+po/messages.pot
+po/messages.po
+po/cs.po
+po/en.po
+po/POTFILES
+```
+
+`po/messages.pot` contains references with line numbers, for example:
+
+```po
+#: /path/to/my-app/views/navigation.gohtml:2
+msgid "nav.home"
+msgstr ""
 ```
 
 ## 📦 Release binaries
@@ -108,7 +193,7 @@ Download the appropriate binary for your platform from the release page and run 
 - --keyword: add custom translation function names
 - --extension: include additional file extensions to scan
 - --output-dir: write generated language files to a directory
-- --language: generate or update a specific language file
+- `LINGUAS`: language list file used for generating/updating language catalogs
 
 ## 🛠️ Development
 
@@ -135,4 +220,9 @@ make coverage
 ## 🤝 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the Apache License 2.0.
+See [LICENSE](LICENSE) for details.
 
