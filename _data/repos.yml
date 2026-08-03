@@ -61,6 +61,10 @@
   sections:
     - title: Badges
       link: /docs/gorm/Badges
+- name: goxgettext
+  sections:
+    - title: Badges
+      link: /docs/goxgettext/Badges
 - name: hooks
   sections:
 - name: html
