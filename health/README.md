@@ -1,51 +1,122 @@
 <img align=right width="168" src="docs/gouef_logo.png">
 
-# github-lib-template
-Github template for new libraries
+# health
 
-[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/gouef/github-lib-template)
+<p align="center">
+  <strong>lightweight health checks for Go services</strong><br/>
+  Register custom checks, verify HTTP endpoints and database connectivity, monitor disk usage, and expose a Gin health endpoint.
+</p>
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/github-lib-template.svg)](https://pkg.go.dev/github.com/gouef/github-lib-template)
-[![GitHub stars](https://img.shields.io/github/stars/gouef/github-lib-template?style=social)](https://github.com/gouef/github-lib-template/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/github-lib-template)](https://goreportcard.com/report/github.com/gouef/github-lib-template)
-[![codecov](https://codecov.io/github/gouef/github-lib-template/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/github-lib-template)
+<p align="center">
+  <a href="#-features"><strong>Features</strong></a>
+  ·
+  <a href="#-quick-start"><strong>Quick start</strong></a>
+  ·
+  <a href="#-testing"><strong>Testing</strong></a>
+  ·
+  <a href="#-contributing"><strong>Contributing</strong></a>
+</p>
 
-## Versions
-![Stable Version](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Stable&labelColor=green)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
-![GitHub Release](https://img.shields.io/github/v/release/gouef/github-lib-template?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+[![Static Badge](https://img.shields.io/badge/Github-gouef%2Fhealth-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fhealth)](https://github.com/gouef/health)
+[![GoDoc](https://pkg.go.dev/badge/github.com/gouef/health.svg)](https://pkg.go.dev/github.com/gouef/health)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gouef/health)](https://goreportcard.com/report/github.com/gouef/health)
+[![codecov](https://codecov.io/github/gouef/health/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/health)
 
-## Also available in other languages
+## ✨ Features
 
-[![Go Implementation](https://img.shields.io/badge/Go-github--lib--template-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/github-lib-template)
-[![PHP Implementation](https://img.shields.io/badge/PHP-github--lib--template-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/github-lib-template)
-[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-github--lib--template-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/github-lib-template)
+- Register custom checks with the Checker interface or FuncChecker
+- Verify HTTP endpoints with HTTPChecker
+- Check database availability with DBChecker
+- Monitor free disk space with DiskChecker
+- Expose results through a Gin-compatible handler
 
+## 🚀 Quick start
 
-## Introduction
+Install the package in your project:
 
-This is template repository for new libraries
+```bash
+go get github.com/gouef/health
+```
 
-## Important
+Example usage:
 
-- Edit go.mod and rename to your package module
-- Uncomment .github/workflows/tests.yml
+```go
+package main
 
-## Contributing
+import (
+    "context"
+    "database/sql"
+    "net/http"
+    "time"
 
-Read [Contributing](CONTRIBUTING.md)
+    _ "github.com/go-sql-driver/mysql"
+    "github.com/gouef/health"
+)
+
+func main() {
+    h := health.New(3 * time.Second)
+
+    h.Register(health.NewFuncChecker("app", func(ctx context.Context) health.Result {
+        return health.Result{Status: health.StatusUp, Type: "custom"}
+    }))
+
+    h.Register(health.NewHTTPChecker("api", "https://example.com", &http.Client{}))
+
+    db, err := sql.Open("mysql", "user:pass@tcp(localhost:3306)/dbname")
+    if err == nil {
+        h.Register(health.NewDBChecker("database", db))
+    }
+
+    h.Register(health.NewDiskChecker("disk", "/", 100*1024*1024))
+}
+```
+
+Expose it through Gin:
+
+```go
+import "github.com/gin-gonic/gin"
+
+func main() {
+    r := gin.New()
+    r.GET("/health", h.Handler())
+    _ = r.Run(":8080")
+}
+```
+
+Example handler response:
+
+```json
+{
+  "status": "UP",
+  "services": {
+    "app": {"status": "UP", "type": "custom", "response_time_ms": 0},
+    "api": {"status": "UP", "type": "http", "response_time_ms": 42}
+  }
+}
+```
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+go test ./...
+```
+
+Generate a coverage report:
+
+```bash
+go test -covermode=set -coverpkg=./... -coverprofile=coverage.txt . && go tool cover -func=coverage.txt
+```
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines and contribution steps.
 
 ## Contributors
 
 <div>
-<span>
-  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/health/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
-</span>
+  <a href="https://github.com/gouef/health/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=gouef/health" />
+  </a>
 </div>
-
-## Join our Discord Community! 🎉
-
-[![Discord](https://img.shields.io/discord/1334331501462163509?style=for-the-badge&logo=discord&logoColor=white&logoSize=auto&label=Community%20discord&labelColor=blue&link=https%3A%2F%2Fdiscord.gg%2FwjGqeWFnqK
-)](https://discord.gg/wjGqeWFnqK)
-
-Click above to join our community on Discord!
