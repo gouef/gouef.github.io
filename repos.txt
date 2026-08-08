@@ -44,3 +44,4 @@ gouef/prime-numbers
 gouef/latte
 gouef/gorm
 gouef/goxgettext
+gouef/health

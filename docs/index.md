@@ -43,3 +43,4 @@
 [latte](./latte/)
 [gorm](./gorm/)
 [goxgettext](./goxgettext/)
+[health](./health/)

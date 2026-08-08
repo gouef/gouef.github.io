@@ -65,6 +65,10 @@
   sections:
     - title: Badges
       link: /docs/goxgettext/Badges
+- name: health
+  sections:
+    - title: Badges
+      link: /docs/health/Badges
 - name: hooks
   sections:
 - name: html
