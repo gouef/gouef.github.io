@@ -29,6 +29,7 @@
 - Check database availability with DBChecker
 - Monitor free disk space with DiskChecker
 - Expose results through a Gin-compatible handler
+- Build a website dashboard by registering monitored sites
 
 ## 🚀 Quick start
 
@@ -91,6 +92,45 @@ Example handler response:
   "services": {
     "app": {"status": "UP", "type": "custom", "response_time_ms": 0},
     "api": {"status": "UP", "type": "http", "response_time_ms": 42}
+  }
+}
+```
+
+Dashboard usage (master website/server):
+
+```go
+dashboard := health.NewDashboard(3 * time.Second)
+
+_ = dashboard.RegisterWebsite("landing", "https://example.com", nil)
+_ = dashboard.RegisterWebsite("api", "https://api.example.com/health", nil)
+
+r := gin.New()
+r.GET("/dashboard", dashboard.Handler())
+r.GET("/dashboard/html", dashboard.BootstrapHandler("Master Dashboard"))
+```
+
+You can also generate HTML manually from a template response:
+
+```go
+response := dashboard.Run(context.Background())
+html, err := health.GenerateBootstrapDashboardHTML("Master Dashboard", response)
+if err != nil {
+  panic(err)
+}
+
+_ = html
+```
+
+Example dashboard response:
+
+```json
+{
+  "status": "UP",
+  "websites": {
+    "landing": {
+      "website": {"name": "landing", "url": "https://example.com"},
+      "result": {"status": "UP", "type": "http", "response_time_ms": 25}
+    }
   }
 }
 ```
