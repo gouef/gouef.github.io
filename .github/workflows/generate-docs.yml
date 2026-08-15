@@ -83,7 +83,7 @@ jobs:
           
             rm -rf $repo_name  # Odstraní repozitář po zpracování
           done < repos.txt
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - run: |
