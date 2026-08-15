@@ -36,17 +36,18 @@ jobs:
           CURRENT_REPO="${{ github.repository }}"
           
           while IFS= read -r repo; do
+            REPO_NAME=$(basename "$repo")
+
             if [[ "$repo" == "$CURRENT_REPO" ]]; then
               echo "Přeskakuji aktuální repozitář: $repo"
               continue
             fi
 
-            if [[ "$repo" == ".github" ]]; then
-              echo "Přeskakuji repozitář: $repo"
+            if [[ "$REPO_NAME" == ".github" || "$REPO_NAME" == .* ]]; then
+              echo "Přeskakuji systémový/skrytý repozitář: $repo"
               continue
             fi
 
-            REPO_NAME=$(basename "$repo")
             if [[ -d "$REPO_NAME/.git" ]]; then
               echo "Repozitář je již naklonovaný, přeskakuji: $repo"
               continue
