@@ -44,3 +44,4 @@
 [gorm](./gorm/)
 [goxgettext](./goxgettext/)
 [health](./health/)
+[api](./api/)
