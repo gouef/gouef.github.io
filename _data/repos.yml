@@ -1,4 +1,6 @@
 
+- name: api
+  sections:
 - name: cache
   sections:
     - title: File

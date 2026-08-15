@@ -45,3 +45,5 @@ gouef/latte
 gouef/gorm
 gouef/goxgettext
 gouef/health
+gouef/.github
+gouef/api
